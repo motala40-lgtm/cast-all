@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- ============ LIGHT THEME (default) ============ -->
+
+    <!-- Backgrounds -->
+    <color name="background_main">#F3F5FF</color>
+    <color name="background_card">#FFFFFF</color>
+    <color name="background_input">#F1F3FC</color>
+
+    <!-- Brand colors -->
+    <color name="primary_blue">#4F8EF7</color>
+    <color name="primary_blue_dark">#3D72D4</color>
+    <color name="secondary_purple">#7C5CFC</color>
+
+    <!-- Status colors -->
+    <color name="success_green">#2FAE73</color>
+    <color name="danger_red">#E5484D</color>
+    <color name="warning_orange">#FF7A59</color>
+
+    <!-- Text -->
+    <color name="text_primary">#1A1D29</color>
+    <color name="text_secondary">#666E80</color>
+    <color name="text_hint">#9AA1B5</color>
+    <color name="ad_placeholder_bg">#F0F1F7</color>
+    <color name="ad_placeholder_border">#D3D7E5</color>
+    <color name="sleep_timer_banner_bg">#EFE9FF</color>
+    <color name="sleep_timer_accent">#6D4FE0</color>
+    <color name="text_on_primary">#FFFFFF</color>
+
+    <!-- Lines / dividers -->
+    <color name="divider">#E5E7F2</color>
+    <color name="border_input">#DCE0F5</color>
+
+    <!-- Gradients, elevated surfaces, media controls -->
+    <color name="gradient_start">#8B6DFF</color>
+    <color name="gradient_end">#4F9AFF</color>
+    <color name="surface_elevated">#FFFFFF</color>
+    <color name="surface_elevated_border">#E7E9F5</color>
+    <color name="now_playing_bg">#FFFFFF</color>
+    <color name="control_circle_bg">#F0F2FB</color>
+    <color name="control_circle_border">#E1E4F5</color>
+    <color name="seek_track">#E3E6F5</color>
+    <color name="seek_progress">#4F8EF7</color>
+    <color name="ripple_light">#14000000</color>
+    <color name="ripple_dark">#14000000</color>
+    <color name="device_icon_bg">#E9ECFB</color>
+
+    <!-- Colored source buttons: video (mint/teal), photo (peach/orange),
+         music (lavender/purple), mirror (sky blue) -->
+    <color name="video_mint_bg">#E3F7F3</color>
+    <color name="video_mint_border">#B6E8DE</color>
+    <color name="video_mint_icon">#1E9E85</color>
+
+    <color name="photo_peach_bg">#FFEFE3</color>
+    <color name="photo_peach_border">#FFD9B8</color>
+    <color name="photo_peach_icon">#E8763B</color>
+
+    <color name="music_lavender_bg">#F0EBFF</color>
+    <color name="music_lavender_border">#DCCEFF</color>
+    <color name="music_lavender_icon">#7C5CFC</color>
+
+    <color name="mirror_sky_bg">#E7F1FF</color>
+    <color name="mirror_sky_border">#C6DFFF</color>
+    <color name="playlist_sky_icon">#3D72D4</color>
+
+    <!-- Sky-blue vertical gradient background -->
+    <color name="sky_gradient_bottom">#BFE0FF</color>
+    <color name="sky_gradient_top">#F6FAFF</color>
+
+    <!-- ============ TOP TOOLBAR (dark navy card, fixed in both themes) ============ -->
+    <color name="toolbar_navy_top">#4F8EF7</color>
+    <color name="toolbar_navy_bottom">#2D6FE0</color>
+    <color name="toolbar_text">#FFFFFF</color>
+
+    <!-- Toolbar circle buttons: settings (purple/indigo), language (blue), cast (orange/red) -->
+    <color name="settings_gradient_start">#6A5FA6</color>
+    <color name="settings_gradient_end">#382576</color>
+    <color name="language_gradient_start">#4C8ACD</color>
+    <color name="language_gradient_end">#0C5AB8</color>
+    <color name="cast_gradient_start">#E38F4E</color>
+    <color name="cast_gradient_end">#DC3513</color>
+
+    <!-- Accent theme swatch outer ring colors -->
+    <color name="swatch_ring_default">#E5E7F2</color>
+    <color name="swatch_ring_selected">#1A1D29</color>
+
+</resources>
