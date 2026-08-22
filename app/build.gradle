@@ -1,0 +1,73 @@
+plugins {
+    id 'com.android.application'
+}
+
+// Release signing is optional: if these environment variables aren't set
+// (e.g. building locally in Android Studio, or in CI without secrets),
+// the release build simply comes out unsigned, exactly like before.
+def releaseKeystorePassword = System.getenv("KEYSTORE_PASSWORD")
+def hasReleaseSigning = releaseKeystorePassword != null && !releaseKeystorePassword.isEmpty()
+
+android {
+    namespace 'com.app.castall'
+    compileSdk 36
+
+    defaultConfig {
+        applicationId 'com.app.castall.scanner'
+        minSdk 24
+        targetSdk 36
+        versionCode 1089
+        versionName '1.12.2'
+    }
+
+    signingConfigs {
+        debug {
+            // Checked into the repo on purpose (debug keys aren't secret):
+            // without a fixed debug signing key, every fresh GitHub Actions
+            // runner would generate its own random debug key, so each new
+            // debug APK would have a different signature and require
+            // uninstalling the old one before installing the new one. This
+            // must NOT be gated behind hasReleaseSigning — a local build in
+            // Android Studio, or any CI run without release secrets
+            // configured, still needs a consistent debug key.
+            storeFile file("debug.keystore")
+            storePassword "android"
+            keyAlias "androiddebugkey"
+            keyPassword "android"
+        }
+        if (hasReleaseSigning) {
+            release {
+                storeFile file(System.getenv("KEYSTORE_PATH") ?: "release.keystore")
+                storePassword releaseKeystorePassword
+                keyAlias System.getenv("KEY_ALIAS")
+                keyPassword System.getenv("KEY_PASSWORD")
+            }
+        }
+    }
+
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (hasReleaseSigning) {
+                signingConfig signingConfigs.release
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.7.0'
+    implementation 'androidx.mediarouter:mediarouter:1.8.1'
+    implementation 'com.google.android.gms:play-services-cast-framework:22.1.0'
+    implementation 'org.nanohttpd:nanohttpd:2.3.1'
+}

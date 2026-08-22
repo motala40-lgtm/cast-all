@@ -1,0 +1,33 @@
+<resources>
+    <!-- Light theme (default). Both variants share the same attribute names;
+         only the referenced @color values (see values/colors.xml vs
+         values-night/colors.xml) and the status-bar icon color actually
+         differ, so text/control tinting stays correct in both modes. -->
+    <style name="Theme.CastAll" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightNavigationBar">true</item>
+        <item name="android:statusBarColor">@color/sky_gradient_top</item>
+        <item name="android:navigationBarColor">@color/sky_gradient_bottom</item>
+        <item name="android:windowBackground">@drawable/bg_gradient_sky</item>
+        <item name="colorAccent">@color/primary_blue</item>
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryDark">@color/primary_blue_dark</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="colorControlNormal">@color/text_primary</item>
+        <item name="colorControlActivated">@color/primary_blue</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+
+    <!-- Custom lightweight bottom-sheet-style dialog (no Material Components
+         dependency needed): floats a rounded-top panel pinned to the bottom
+         of the screen with a dim scrim behind it. -->
+    <style name="BottomSheetDialogTheme" parent="Theme.AppCompat.DayNight.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+    </style>
+</resources>

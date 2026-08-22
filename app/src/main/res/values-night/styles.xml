@@ -1,0 +1,21 @@
+<resources>
+    <!-- Dark theme override: only the status/nav bar icon color needs to
+         flip; every other attribute is identical to the light variant and
+         automatically resolves to values-night/colors.xml. -->
+    <style name="Theme.CastAll" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:fontFamily">sans</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:statusBarColor">@color/sky_gradient_top</item>
+        <item name="android:navigationBarColor">@color/sky_gradient_bottom</item>
+        <item name="android:windowBackground">@drawable/bg_gradient_sky</item>
+        <item name="colorAccent">@color/primary_blue</item>
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryDark">@color/primary_blue_dark</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="colorControlNormal">@color/text_primary</item>
+        <item name="colorControlActivated">@color/primary_blue</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+    </style>
+</resources>
